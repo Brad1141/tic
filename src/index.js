@@ -22,6 +22,7 @@ import './index.css';
         </>
       );
     }
+    
   }
 
   class Component1 extends React.Component {
