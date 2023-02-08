@@ -1,17 +1,62 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  
+  class Root extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+       
+      };
+    }
+  
+
+    render() {
+      return (
+        <>
+        <Component1></Component1>
+        <Component2></Component2>
+        <button>search</button>
+        </>
+      );
+    }
+  }
+
+  class Component1 extends React.Component {
+    constructor() {
+      super()
+      this.state = {
+        name: "Component 1"
+      }
+    }
+
+    render(){
+      return(
+      <div>{this.state.name}</div>
+      );
+    }
+  }
+
+  class Component2 extends React.Component {
+    constructor() {
+      super()
+      this.state = {
+        name: "Component 2"
+      }
+    }
+
+    render() {
+      return(
+        <div>{this.state.name}</div>
+      );
+    }
+  }
+  
+  // ========================================
+  
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<Root />);
+  
+  
